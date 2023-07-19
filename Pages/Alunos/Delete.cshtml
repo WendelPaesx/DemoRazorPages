@@ -1,0 +1,46 @@
+﻿@page
+@model DemoRazorPages.Pages.Alunos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.DataCadastro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.DataCadastro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.Ativo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.Ativo)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="aluno.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,43 @@
+﻿@page
+@model DemoRazorPages.Pages.Alunos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>aluno</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.DataCadastro)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.DataCadastro)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.aluno.Ativo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.aluno.Ativo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.aluno?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
